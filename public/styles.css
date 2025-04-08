@@ -206,7 +206,7 @@ hr {
     gap: 1rem;
     margin-top: 1rem;
 }
-.hero-btn a, .hero-btn a {
+.hero-btn a {
     text-decoration: none;
     color: var(--color-white);
     padding: 10px;
@@ -219,7 +219,7 @@ hr {
 .hero-content a:nth-child(1){
     background-color: var(--color-btn-primary);
 }
-.hero-content a:nth-child(2), .hero-btn a  {
+.hero-content a:nth-child(2) {
     background-color: var(--color-btn-secondary);
 }
 
@@ -270,6 +270,7 @@ hr {
 .card {
     padding: 20px;
 }
+
 
 
 .intro, .skills-tools {
