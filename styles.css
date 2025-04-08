@@ -71,6 +71,7 @@ header .logo {
     transition: .3s;
     opacity: 0;
     animation: slideLeft .5s ease forwards;
+    font-weight: 700;
 }
 
 .navbar {
