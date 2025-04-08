@@ -46,19 +46,19 @@ document.addEventListener("DOMContentLoaded", () => {
     items.forEach((item) => observer.observe(item));
   });
 
-  // script.js
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
+//   // script.js
+// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+//   anchor.addEventListener("click", function (e) {
+//     e.preventDefault();
+//     const target = document.querySelector(this.getAttribute("href"));
+//     if (target) {
+//       target.scrollIntoView({ behavior: "smooth" });
 
-      // Remove the hash from the URL after scroll
-      history.replaceState(null, null, " ");
-    }
-  });
-});
+//       // Remove the hash from the URL after scroll
+//       history.replaceState(null, null, " ");
+//     }
+//   });
+// });
 
   
 
