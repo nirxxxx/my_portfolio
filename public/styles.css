@@ -166,7 +166,7 @@ hr {
 .hero-img img {
     width: 100%;
     border: solid var(--color-accent-circle);
-    border-radius: 360px;
+    border-radius: 5px;
     transition: .5s ease-in-out;
     opacity: 0;
     animation: slideRight 1s ease forwards, floatImg 4s ease-in-out infinite;
@@ -475,6 +475,14 @@ hr {
     font-size: 1.5rem;
     font-weight: 700;
 }
+
+.social-icons h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color); /* Or any color you’re using */
+    margin-top: 1rem;
+  }
+  
 .social-icons, .contact form {
     width: 100%;
     padding: 20px;
@@ -491,7 +499,7 @@ hr {
     text-decoration: none;
     color: #0ef;
     border-radius: 5px;
-    margin: 30px 15px 30px 0;
+    margin: 0 15px 0 0;
     transition: .5s ease;
     opacity: 0;
     animation: slideRight 1s ease forwards;
