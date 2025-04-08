@@ -205,7 +205,6 @@ hr {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
-    border: solid 1px black;
 }
 .hero-btn a {
     text-decoration: none;
@@ -466,7 +465,6 @@ hr {
     width: 100%;
     min-height: 50vh;
     padding: 50px 0;
-    border: solid 1px white;
 }
 
 .contact h1 {
@@ -489,7 +487,6 @@ hr {
 .social-icons, .contact form {
     width: 100%;
     padding: 20px;
-    border: solid 1px white;
 }
 .contact .contact-links {
     margin-top: 1rem;
@@ -586,11 +583,13 @@ textarea:focus {
     
     .navbar {
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
+        justify-content: center;
     }
 
     .nav-links {
         position: absolute;
+        padding: 0 28px 0 0;
         top: 100%;
         right: 0;
         background-color: var(--color-bg);
@@ -600,6 +599,7 @@ textarea:focus {
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
         transition: max-height 0.3s ease;
     }
 
@@ -610,7 +610,9 @@ textarea:focus {
     .nav-links li {
         display: block;
         margin: 20px;
-        text-align: right;
+        text-align: center;
+        justify-content: center;
+
     }
     
     .menu-toggle {
@@ -648,7 +650,6 @@ textarea:focus {
 
     .card-body {
         padding: 0;
-        border: solid 1px white;
     }
 }
 
