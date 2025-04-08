@@ -126,6 +126,13 @@ main {
     min-height: 100vh;
     padding: 0 9% 0;
 }
+hr {
+    border: none;
+    height: 1px;
+    background: var(--color-text-muted); /* or any color */
+    margin: 40px 0; /* spacing above and below */
+  }
+  
 
 /* HERO SECTIOn */
 
