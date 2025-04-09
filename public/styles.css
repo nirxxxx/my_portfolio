@@ -179,8 +179,11 @@ hr {
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
-    scroll-padding-top: 80px; /* Match your header height */
+    padding-top: 100px;
+    margin-top: -100px;    
 }
+
+
 
 .hero-content {
     flex: 1;
