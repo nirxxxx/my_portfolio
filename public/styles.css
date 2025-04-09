@@ -12,6 +12,7 @@ html {
     font-size: 16px;
 }
 
+
 :root {
     /* Background */
     --color-bg: #1F242D;
@@ -178,6 +179,7 @@ hr {
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+    scroll-padding-top: 80px; /* Match your header height */
 }
 
 .hero-content {
@@ -701,13 +703,15 @@ footer {
     
     .hero {
         flex-direction: column-reverse;
-        padding-top: 1rem;
+        padding-top: 100px;
+        margin-top: -80px;        
     }
     
     .hero-content, .hero-img {
         width: 100%;
         padding: 1rem;
     }
+
     
     .hero-img img {
         max-width: 300px;
