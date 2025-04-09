@@ -50,6 +50,9 @@ body {
     color: var(--color-text-main);
     line-height: 1.6;
 }
+.about-me, .projects, .contact {
+    padding: 5rem 0;
+}
 
 /* Header & Navigation */
 header {
@@ -75,6 +78,7 @@ header .logo {
     opacity: 0;
     animation: slideLeft .5s ease forwards;
     font-weight: 700;
+    z-index: 999;
 }
 
 .navbar {
@@ -168,7 +172,7 @@ hr {
 /* Hero Section */
 .hero {
     width: 100%;
-    min-height: calc(100vh - 80px);
+    min-height: 100vh;
     padding: 2rem 0;
     display: flex;
     align-items: center;
@@ -190,7 +194,6 @@ hr {
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    border: solid 1px white;
 }
 
 .hero-img img {
@@ -276,8 +279,7 @@ hr {
 /* About Me Section */
 .about-me {
     width: 100%;
-    min-height: 100vh;
-    padding: 3rem 0;
+    min-height: auto;
 }
 
 .about-me h1 {
@@ -286,6 +288,7 @@ hr {
     padding: 1rem 0;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
+
 }
 
 .card-body {
@@ -401,8 +404,7 @@ hr {
 /* Projects Section */
 .projects {
     width: 100%;
-    min-height: 100vh;
-    padding: 3rem 0;
+    min-height: auto;
 }
 
 .projects h1 {
@@ -460,8 +462,7 @@ hr {
 /* Contact Section */
 .contact {
     width: 100%;
-    min-height: 50vh;
-    padding: 3rem 0;
+    min-height: auto;
 }
 
 .contact h1 {
@@ -663,26 +664,31 @@ footer {
 @media (max-width: 768px) {
     header {
         padding: 1rem 5%;
+        z-index: 1000;
+    }
+    .about-me, .projects, .contact {
+        padding: 4rem 0;
+    }
+    .about-me h1, .projects h1, .contact h1 {
+        padding: 1rem 0 0 0;
     }
     
     .navbar ul {
-        position: fixed;
-        top: 10%;
+        position: absolute;
+        top: 100%;
         left: 0;
         right: 0;
         background-color: var(--color-bg);
         flex-direction: column;
         align-items: center;
-        padding: 1rem 0;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease-in-out;
-        z-index: 998;
+        z-index: -1;
     }
     
     .navbar ul.active {
         max-height: 500px;
-        padding: 1rem 0;
     }
     
     .navbar ul li {
