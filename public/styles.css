@@ -88,17 +88,19 @@ header {
     top: 0;
     z-index: 999;
 }
-a{
+a, h1, h3, p {
     -webkit-tap-highlight-color: transparent;
+    outline: none;
 }
-p{
+a:focus, h1:focus, h3:focus, p:focus {
     -webkit-tap-highlight-color: transparent;
+    outline: none;
+    background: transparent;
 }
-h1{
+a:active, h1:active, h3:active, p:active {
     -webkit-tap-highlight-color: transparent;
-}
-h3{
-    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    background: transparent;
 }
 
 header a {
