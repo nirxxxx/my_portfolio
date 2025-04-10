@@ -90,18 +90,17 @@ header {
 }
 a, h1, h3, p {
     -webkit-tap-highlight-color: transparent;
-    outline: none;
-}
-a:focus, h1:focus, h3:focus, p:focus {
-    -webkit-tap-highlight-color: transparent;
-    outline: none;
-    background: transparent;
-}
-a:active, h1:active, h3:active, p:active {
-    -webkit-tap-highlight-color: transparent;
-    outline: none;
-    background: transparent;
-}
+    -webkit-user-select: none; /* Disable text selection */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    touch-action: manipulation; /* Optimize for tap */
+  }
+  
+  /* Remove focus/active states */
+  a:active, h1:active, h3:active, p:active {
+    background: transparent !important;
+  }
 
 header a {
     font-size: 1.5rem;
