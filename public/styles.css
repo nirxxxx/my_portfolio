@@ -6,7 +6,12 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation; /* Optimize for tap */
 }
+/* Remove focus/active states */
+a:active, h1:active, h3:active, p:active, label:active, li:active{
+    background: transparent !important;
+  }
 
 html {
     scroll-behavior: smooth;
