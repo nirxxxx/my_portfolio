@@ -57,6 +57,34 @@ var typed = new Typed('.multiple-text', {
 //     }
 //   });
 // });
+const themeBtn = document.getElementById('theme-btn');
 
-  
+themeBtn.addEventListener('click', () => {
+    // Toggle UI state
+    themeBtn.classList.toggle('active');
+    alert('This feature is currently in development and will be available soon.')
+    
+    // Toggle theme
+    // const isDark = document.body.toggleAttribute('data-theme');
+    
+    // Save preference to localStorage
+    // localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
 
+// // Check for saved preference on load
+// function initTheme() {
+//     const savedTheme = localStorage.getItem('theme') || 
+//                       (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    
+//     if (savedTheme === 'dark') {
+//         document.body.setAttribute('data-theme', 'dark');
+//         themeBtn.classList.add('active');
+//         console.log('dark')
+//     } else {
+//         document.body.setAttribute('data-theme', 'light');
+//         themeBtn.classList.add('active');
+//         console.log('light')
+//     }
+// }
+
+// initTheme();

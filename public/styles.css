@@ -16,6 +16,7 @@ html {
 :root {
     /* Background */
     --color-bg: #1F242D;
+    --card-bg: rgba(45, 52, 63, 0.5);
   
     /* Text Colors */
     --color-text-main: #F9FAFB;
@@ -46,10 +47,30 @@ html {
     --color-accent-circle: #00D1B2;
 }
 
+/* Light Mode (Default) */
+[data-theme="light"] {
+    --color-bg: #F9FAFB;
+    --card-bg: #FFFFFF;
+    --color-text-main: #1F242D;
+    --toggle-bg: #E5E7EB;
+    --toggle-handle: #6B7280;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+    --color-bg: #1F242D;
+    --card-bg: #2D3748;
+    --color-text-main: #F9FAFB;
+    --toggle-bg: #4B5563;
+    --toggle-handle: #E5E7EB;
+}
+
+/* Smooth theme transition */
 body {
     background-color: var(--color-bg);
     color: var(--color-text-main);
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 .about-me, .projects, .contact {
     padding: 5rem 0;
@@ -90,10 +111,11 @@ header .logo {
 .navbar ul {
     display: flex;
     list-style: none;
+    align-items: center;
 }
 
 .navbar ul li {
-    margin-left: 3.5rem;
+    margin-right: 3.5rem;
 }
 
 .navbar ul li a {
@@ -132,6 +154,9 @@ header .logo {
     justify-content: space-between;
     height: 20px;
     width: 25px;
+    opacity: 0;
+    transition: .3s;
+    animation: slideRight 1s ease forwards;
 }
 
 .menu-toggle .bar {
@@ -139,7 +164,7 @@ header .logo {
     width: 100%;
     height: 3px;
     background-color: var(--color-white);
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 .menu-toggle.open .bar:nth-child(1) {
@@ -153,6 +178,74 @@ header .logo {
 .menu-toggle.open .bar:nth-child(3) {
     transform: translateY(-10px) rotate(45deg);
 }
+.navbar button   {
+    position: relative;
+    width: 70px;
+    font-size: 1rem;
+    padding: 1px;
+    border-radius: 20px;
+    border: solid 1px var(--color-skill-bg);
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    z-index: 1000;
+    background-color: var(--color-skill-bg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.navbar button i {
+    position: relative;
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    z-index: 999;
+    transition: color 0.3s ease; /* Smooth icon color change */
+    color: var(--color-text-paragraph);
+}
+
+.navbar button:not(.active) i:nth-child(2) {
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    z-index: 999;
+    color: var(--color-white);
+}
+.navbar button.active i:nth-child(1) {
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    z-index: 999;
+    color: var(--color-white);
+}
+
+.navbar button .circle {
+    position: absolute;
+    width: 38%;
+    height: 94%;
+    top: 1px;
+    right: 1px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    background-color: #6c727c;
+    transition: all 0.5s ease; /* Explicitly animate left */
+}
+/* Hover effect (expands width) */
+/* .navbar button:hover .circle {
+    padding: 0 20px ;
+} */
+
+/* Active state (moves to left) */
+.navbar button.active .circle {
+    right: 41px;  /* Reset right */
+}
+
+
+
+
+
+
+
 
 /* Main Content */
 main {
@@ -299,6 +392,10 @@ hr {
     text-align: justify;
 }
 
+.intro .card:nth-child(2) ul li{
+    margin-left: 2rem;
+}
+
 .card-body {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -331,10 +428,11 @@ hr {
     margin-top: 1rem;
 }
 
-.intro ul li {
+.intro .educ ul li {
     padding: 1.25rem;
     color: var(--color-bg);
     transition: all 0.3s ease;
+    list-style: none;
 }
 
 .intro ul li a {
@@ -570,7 +668,7 @@ textarea:focus {
     outline: none;
 }
 
-button {
+.contact button {
     background-color: var(--color-btn-secondary);
     color: var(--color-white);
     border: none;
@@ -581,7 +679,7 @@ button {
     transition: all 0.3s ease;
 }
 
-button:hover {
+.contact button:hover {
     background-color: var(--color-project-two-start);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
@@ -607,7 +705,7 @@ footer {
     100% { transform: translateX(0); opacity: 1; }
 }
 @keyframes slideRight {
-    0% { transform: translateX(-100px); opacity: 0; }
+    0% { transform: translateX(100px); opacity: 0; }
     100% { transform: translateX(0); opacity: 1; }
 }
 
@@ -653,6 +751,9 @@ footer {
     transform: translate(0);
 }
 
+
+
+
 /* Responsive Breakpoints */
 @media (max-width: 1200px) {
     .hero {
@@ -693,7 +794,7 @@ footer {
         align-items: center;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
+        transition: max-height 0.2s ease-in-out;
         z-index: -1;
     }
     
@@ -707,6 +808,9 @@ footer {
     
     .menu-toggle {
         display: flex;
+    }
+    .navbar button {
+        margin-bottom: 1rem;
     }
     
     .hero {
