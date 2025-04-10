@@ -5,7 +5,6 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -89,7 +88,7 @@ header {
     top: 0;
     z-index: 999;
 }
-a {
+a, h1, h3, p {
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -843,13 +842,13 @@ footer {
         justify-content: center;
     }
     
-    .intro ul li:nth-child(1) {
+    .intro #cur-educ {
         font-size: .9rem;
     }
-    .intro ul li:nth-child(2) {
+    .intro #second-educ {
         font-size: .8rem;
     }
-    .intro ul li:nth-child(3) {
+    .intro #third-educ {
         font-size: .7rem;
     }
 }
