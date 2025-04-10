@@ -88,6 +88,9 @@ header {
     top: 0;
     z-index: 999;
 }
+a {
+    -webkit-tap-highlight-color: transparent;
+}
 
 header a {
     font-size: 1.5rem;
@@ -157,6 +160,7 @@ header .logo {
     opacity: 0;
     transition: .3s;
     animation: slideRight 1s ease forwards;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .menu-toggle .bar {
@@ -777,6 +781,10 @@ footer {
         padding: 1rem 5%;
         z-index: 1000;
     }
+    header .logo{
+        font-size: 1.3rem;
+    }
+
     .about-me, .projects, .contact {
         padding: 4rem 0;
     }
