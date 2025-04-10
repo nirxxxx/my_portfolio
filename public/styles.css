@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -88,19 +89,6 @@ header {
     top: 0;
     z-index: 999;
 }
-a, h1, h3, p {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-user-select: none; /* Disable text selection */
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    touch-action: manipulation; /* Optimize for tap */
-  }
-  
-  /* Remove focus/active states */
-  a:active, h1:active, h3:active, p:active {
-    background: transparent !important;
-  }
 
 header a {
     font-size: 1.5rem;
