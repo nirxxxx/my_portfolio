@@ -88,7 +88,16 @@ header {
     top: 0;
     z-index: 999;
 }
-a, h1, h3, p {
+a{
+    -webkit-tap-highlight-color: transparent;
+}
+p{
+    -webkit-tap-highlight-color: transparent;
+}
+h1{
+    -webkit-tap-highlight-color: transparent;
+}
+h3{
     -webkit-tap-highlight-color: transparent;
 }
 
