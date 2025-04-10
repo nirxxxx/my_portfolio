@@ -8,10 +8,6 @@
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation; /* Optimize for tap */
 }
-/* Remove focus/active states */
-a:active, h1:active, h3:active, p:active, label:active, li:active{
-    background: transparent !important;
-  }
 
 html {
     scroll-behavior: smooth;
@@ -77,7 +73,27 @@ body {
     color: var(--color-text-main);
     line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
+    -webkit-tap-highlight-color: transparent; /* Removes the gray tap highlight on iOS */
 }
+/* Allow text selection on specific elements */
+p, h1, h2, h3, h4, h5, h6, div, span, ul, li {
+    -webkit-user-select: text; /* Allow selection (Safari) */
+    -moz-user-select: text;    /* Firefox */
+    user-select: text;         /* Standard */
+  }
+  /* Remove active state highlights */
+:active {
+    background-color: transparent !important;
+  }
+  
+  /* Optional: Disable selection on buttons/non-text elements */
+  button, a {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+
+
 .about-me, .projects, .contact {
     padding: 5rem 0;
 }
