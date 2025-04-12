@@ -190,7 +190,7 @@ header .logo {
     font-size: 1rem;
     padding: 1px;
     border-radius: 20px;
-    border: solid 1px var(--border-color);
+    border: none;
     display: flex;
     gap: 1rem;
     cursor: pointer;
@@ -206,7 +206,7 @@ header .logo {
     padding: 5px;
     z-index: 999;
     transition: color 0.3s ease; /* Smooth icon color change */
-    color: var(--border-color);
+    color: var(--body-bg);
 }
 
 .navbar button:not(.active) i:nth-child(2) {
@@ -801,10 +801,10 @@ footer {
     
     .navbar ul {
         position: absolute;
-        top: 100%;
+        top: 64px;
         left: 0;
         right: 0;
-        background-color: var(--color-bg);
+        background-color: var(--header-bg);
         flex-direction: column;
         align-items: center;
         max-height: 0;
