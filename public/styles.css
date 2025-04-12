@@ -99,7 +99,7 @@ a, h1, h3, p, span, li {
   }
   
   /* Remove focus/active states */
-  a:active, h1:active, h3:active, p:active, span:active, li:active {
+  a:active, h1:active, h3:active, p:active, span:active {
     background: transparent !important;
   }
 
