@@ -198,6 +198,7 @@ header .logo {
     background-color: var(--text-main);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
+    transition: all .3s ease;
 }
 .navbar button i {
     position: relative;
@@ -234,7 +235,7 @@ header .logo {
     display: flex;
     flex-direction: row;
     background-color: #6c727c;
-    transition: all 0.5s ease; /* Explicitly animate left */
+    transition: all 0.5s ease-in-out; /* Explicitly animate left */
 }
 /* Hover effect (expands width) */
 /* .navbar button:hover .circle {
