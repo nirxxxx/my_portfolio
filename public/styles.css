@@ -186,7 +186,7 @@ header .logo {
 }
 .navbar button   {
     position: relative;
-    width: 70px;
+    width: 67px;
     font-size: 1rem;
     padding: 1px;
     border-radius: 20px;
@@ -229,7 +229,7 @@ header .logo {
     width: 38%;
     height: 94%;
     top: 1px;
-    left: 1px;
+    left: 0;
     border-radius: 20px;
     display: flex;
     flex-direction: row;
