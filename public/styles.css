@@ -88,7 +88,7 @@ header {
     top: 0;
     z-index: 999;
 }
-a, h1, h3, p, span, ul, li {
+a, h1, h3, p, span, li {
     -webkit-tap-highlight-color: transparent;
     -webkit-user-select: none; /* Disable text selection */
     -moz-user-select: none;
@@ -99,7 +99,7 @@ a, h1, h3, p, span, ul, li {
   
   /* Remove focus/active states */
   a:active, h1:active, h3:active, p:active,
-  span:active, ul:active, li:active {
+  span:active, li:active {
     background: transparent !important;
   }
 
