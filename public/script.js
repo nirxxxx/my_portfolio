@@ -59,32 +59,58 @@ var typed = new Typed('.multiple-text', {
 // });
 const themeBtn = document.getElementById('theme-btn');
 
+// Initialize theme from localStorage or OS preference
+function initTheme() {
+  const savedTheme = localStorage.getItem('theme');
+  const osPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  
+  if (savedTheme === 'dark' || (!savedTheme && osPrefersDark)) {
+    document.body.setAttribute('data-theme', 'dark');
+    themeBtn.classList.add('active');
+  }
+}
+
+// Toggle theme function
+function toggleTheme() {
+  const isDark = document.body.hasAttribute('data-theme');
+  
+  if (isDark) {
+    document.body.removeAttribute('data-theme');
+    themeBtn.classList.remove('active');
+    localStorage.setItem('theme', 'light');
+  } else {
+    document.body.setAttribute('data-theme', 'dark');
+    themeBtn.classList.add('active');
+    localStorage.setItem('theme', 'dark');
+  }
+}
+
+// Event listener with error handling
 themeBtn.addEventListener('click', () => {
-    // Toggle UI state
-    themeBtn.classList.toggle('active');
-    alert('This feature is currently in development and will be available soon.')
-    
-    // Toggle theme
-    // const isDark = document.body.toggleAttribute('data-theme');
-    
-    // Save preference to localStorage
-    // localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  try {
+    toggleTheme();
+  } catch (error) {
+    console.error('Theme toggle failed:', error);
+    // Optional fallback notification
+    themeBtn.textContent = 'Error changing theme';
+    setTimeout(() => {
+      themeBtn.textContent = 'Toggle Theme';
+    }, 2000);
+  }
 });
 
-// // Check for saved preference on load
-// function initTheme() {
-//     const savedTheme = localStorage.getItem('theme') || 
-//                       (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    
-//     if (savedTheme === 'dark') {
-//         document.body.setAttribute('data-theme', 'dark');
-//         themeBtn.classList.add('active');
-//         console.log('dark')
-//     } else {
-//         document.body.setAttribute('data-theme', 'light');
-//         themeBtn.classList.add('active');
-//         console.log('light')
-//     }
-// }
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', initTheme);
 
-// initTheme();
+// Watch for OS theme changes
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+  if (!localStorage.getItem('theme')) { // Only respond if no manual preference
+    if (e.matches) {
+      document.body.setAttribute('data-theme', 'dark');
+      themeBtn.classList.add('active');
+    } else {
+      document.body.removeAttribute('data-theme');
+      themeBtn.classList.remove('active');
+    }
+  }
+});

@@ -12,65 +12,55 @@ html {
     font-size: 16px;
 }
 
-
 :root {
-    /* Background */
-    --color-bg: #1F242D;
-    --card-bg: rgba(45, 52, 63, 0.5);
-  
-    /* Text Colors */
-    --color-text-main: #F9FAFB;
-    --color-text-sub: #0ef;
-    --color-text-paragraph: #C1C8D0;
-    --color-text-muted: #E4E4E4;
-    --color-text-link: #7C3AED;
-    --color-white: #FFFFFF;
-  
-    /* Button Colors */
-    --color-btn-primary: #00D1B2;
-    --color-btn-secondary: #6366F1;
-  
-    /* Skill Tag */
-    --color-skill-bg: #2D343F;
-  
-    /* Project Card Gradients */
-    --color-project-one-start: #1D4ED8;
-    --color-project-one-end: #3B82F6;
+    --header-bg: #FFFFFF;
+    --body-bg: #F8F9FA;
+    --text-main: #212529;
+    --card-bg: #FFFFFF;
+    --card-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    /* --primary-color: #4D77FF;
+    --primary-color-hover: #3A5BD9; */
+    --border-color: #E9ECEF;
+
+    --typing-text: #2D3748;
+    --primary-color: #4D77FF;
+    --primary-color-text: #FFFFFF;
+    --primary-color-hover: #3A5BD9;
     
-    --color-project-two-start: #8B5CF6;
-    --color-project-two-end: #EC4899;
-  
-    --color-project-three-start: #EF4444;
-    --color-project-three-end: #F97316;
-  
-    /* Accent */
-    --color-accent-circle: #00D1B2;
+    --secondary-color: #E9ECEF;
+    --secondary-color-text: #1A1A1A;
+    --secondary-color-hover: #D1D5DB;
+    --secondary-color-border: #CBD5E0;
+    
+    --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    --primary-const-color:  #FFFFFF;
+    --secondary-const-color:  #212529;
 }
 
-/* Light Mode (Default) */
-[data-theme="light"] {
-    --color-bg: #F9FAFB;
-    --card-bg: #FFFFFF;
-    --color-text-main: #1F242D;
-    --toggle-bg: #E5E7EB;
-    --toggle-handle: #6B7280;
-}
 
 /* Dark Mode */
 [data-theme="dark"] {
-    --color-bg: #1F242D;
-    --card-bg: #2D3748;
-    --color-text-main: #F9FAFB;
-    --toggle-bg: #4B5563;
-    --toggle-handle: #E5E7EB;
-}
+    --header-bg: #1A1A1A;
+    --body-bg: #121212;
+    --text-main: #E9ECEF;
+    --card-bg: #242424;
+    --card-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+    --primary-color: #6C63FF;
+    --primary-color-text: #212529;
+    --primary-color-hover: #5A52D4;
+    --border-color: #333333;
+    --secondary-color-text: #FFFFFF;
+    
+    --box-shadow: 0 5px 10px rgba(49, 48, 48, 0.2);
+    --secondary-color-hover: #1A1A1A;
 
+}
 /* Smooth theme transition */
 body {
-    background-color: var(--color-bg);
-    color: var(--color-text-main);
+    background-color: var(--body-bg);
     line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
+    color: var(--text-main);
 }
 .about-me, .projects, .contact {
     padding: 5rem 0;
@@ -78,7 +68,8 @@ body {
 
 /* Header & Navigation */
 header {
-    background-color: var(--color-bg);
+    background-color: var(--header-bg);
+    box-shadow: var(--box-shadow);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -106,7 +97,7 @@ a, h1, h3, p, span, li {
 header a {
     font-size: 1.5rem;
     text-decoration: none;
-    color: var(--color-text-main);
+    color: var(--text-main);
 }
 
 header .logo {
@@ -142,7 +133,7 @@ header .logo {
 }
 
 .navbar ul li a:hover {
-    color: var(--color-text-sub);
+    color: var(--secondary-color-text);
 }
 
 .navbar ul li a::after {
@@ -150,7 +141,7 @@ header .logo {
     position: absolute;
     width: 0;
     height: 2px;
-    background: var(--color-text-sub);
+    background: var(--secondary-color);
     bottom: -4px;
     left: 0;
     transition: width 0.3s ease;
@@ -178,7 +169,7 @@ header .logo {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: var(--color-white);
+    background-color: var(--text-main);
     transition: all 0.2s ease;
 }
 
@@ -199,12 +190,12 @@ header .logo {
     font-size: 1rem;
     padding: 1px;
     border-radius: 20px;
-    border: solid 1px var(--color-skill-bg);
+    border: solid 1px var(--border-color);
     display: flex;
     gap: 1rem;
     cursor: pointer;
     z-index: 1000;
-    background-color: var(--color-skill-bg);
+    background-color: var(--text-main);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
@@ -215,7 +206,7 @@ header .logo {
     padding: 5px;
     z-index: 999;
     transition: color 0.3s ease; /* Smooth icon color change */
-    color: var(--color-text-paragraph);
+    color: var(--border-color);
 }
 
 .navbar button:not(.active) i:nth-child(2) {
@@ -223,14 +214,14 @@ header .logo {
     border-radius: 20px;
     padding: 5px;
     z-index: 999;
-    color: var(--color-white);
+    color: var(--card-bg);
 }
 .navbar button.active i:nth-child(1) {
     border: none;
     border-radius: 20px;
     padding: 5px;
     z-index: 999;
-    color: var(--color-white);
+    color: var(--body-bg);
 }
 
 .navbar button .circle {
@@ -238,7 +229,7 @@ header .logo {
     width: 38%;
     height: 94%;
     top: 1px;
-    right: 1px;
+    left: 1px;
     border-radius: 20px;
     display: flex;
     flex-direction: row;
@@ -252,15 +243,8 @@ header .logo {
 
 /* Active state (moves to left) */
 .navbar button.active .circle {
-    right: 41px;  /* Reset right */
+    left: 41px;  /* Reset right */
 }
-
-
-
-
-
-
-
 
 /* Main Content */
 main {
@@ -274,7 +258,7 @@ main {
 hr {
     border: none;
     height: 1px;
-    background: #ffffff42;
+    background: var(--secondary-color-border);
     margin: 2.5rem 0;
 }
 
@@ -311,7 +295,7 @@ hr {
 .hero-img img {
     width: 100%;
     max-width: 400px;
-    border: 2px solid var(--color-accent-circle);
+    border: 2px solid var(--primary-color);
     border-radius: 5px;
     transition: .5s ease-in-out;
     opacity: 0;
@@ -320,8 +304,8 @@ hr {
 }
 
 .hero-img img:hover {
-    border-color: var(--color-text-sub);
-    box-shadow: 0 10px 15px var(--color-text-sub);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 15px var(--primary-color-hover);
 }
 
 .hero-content h1 {
@@ -336,7 +320,7 @@ hr {
 .hero-content h3 {
     font-size: clamp(1.25rem, 3vw, 2rem);
     font-weight: 700;
-    color: var(--color-text-sub);
+    color: var(--primary-color);
     opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay: .7s;
@@ -363,7 +347,7 @@ hr {
 
 .hero-btn a {
     text-decoration: none;
-    color: var(--color-white);
+    color: var(--primary-const-color);
     padding: 0.75rem 1.5rem;
     border-radius: 5px;
     letter-spacing: 1px;
@@ -376,17 +360,21 @@ hr {
 }
 
 .hero-btn a:nth-child(1) {
-    background-color: var(--color-btn-primary);
+    background-color: var(--primary-color);
+    border: none;
 }
 
 .hero-btn a:nth-child(2) {
-    background-color: var(--color-btn-secondary);
+    background-color: var(--secondary-color);
+    color: var(--secondary-const-color);
+    border: var(--secondary-color-border);
 }
 
 .hero-btn a:hover {
-    transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
+
 
 /* About Me Section */
 .about-me {
@@ -420,14 +408,15 @@ hr {
 
 .card {
     padding: 1.5rem;
-    background: rgba(45, 52, 63, 0.5);
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--card-bg);
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    box-shadow: var(--card-shadow);
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--box-shadow);
 }
 
 .intro, .skills-tools {
@@ -445,31 +434,35 @@ hr {
 
 .intro .educ ul li {
     padding: 1.25rem;
-    color: var(--color-bg);
+    color: var(--text-main);
     transition: all 0.3s ease;
     list-style: none;
 }
 
 .intro ul li a {
     text-decoration: none;
-    color: var(--color-bg);
+    color: var(--text-main);
 }
 
 #cur-educ {
     width: 100%;
-    background-color: var(--color-text-sub);
+    background-color: var(--primary-color);
     border-radius: 5px;
+    color: var(--primary-color-text);
+}
+#cur-educ a {
+    color: var(--primary-color-text);
 }
 
 #second-educ {
     width: 90%;
-    background-color: rgba(0, 238, 255, 0.795);
+    background-color: #4d77ffc5;
     border-radius: 5px;
 }
 
 #third-educ {
     width: 80%;
-    background-color: rgba(0, 238, 255, 0.562);
+    background-color: #4d77ff8e;
     border-radius: 5px;
 }
 
@@ -499,7 +492,7 @@ hr {
 .about-me #css { color: #1572B6; }
 .about-me #js { color: #F7DF1E; }
 .about-me #git { color: #F05032; }
-.about-me #github { color: var(--color-white); }
+.about-me #github { color: var(--card-bg); background-color: var(--text-main); border-radius: 50%; }
 .about-me #desktop { color: #00A0DC; }
 
 .skills-tools .card ul {
@@ -510,7 +503,7 @@ hr {
 }
 
 .skills-tools .card ul li {
-    background-color: var(--color-skill-bg);
+    background-color: var(--border-color);
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.85rem;
@@ -519,9 +512,9 @@ hr {
 }
 
 .skills-tools .card ul li:hover {
-    background-color: var(--color-btn-secondary);
-    color: var(--color-bg);
+    background-color: var(--secondary-color-hover);
     transform: translateY(-2px);
+    color: var(--text-main);
 }
 
 /* Projects Section */
@@ -560,15 +553,12 @@ hr {
 
 .projects #img1 {
     background-image: url('img/Screenshot\ from\ 2025-04-08\ 12-42-02.png');
-    border: 1px solid var(--color-project-one-start);
+    border: 1px solid var(--border-color);
 }
 
-.projects #img2 {
-    background: linear-gradient(-225deg, var(--color-project-two-start), #ec489a71 90%);
-}
-
-.projects #img3 {
-    background: linear-gradient(-225deg, var(--color-project-three-start), #f974167e 90%);
+.projects #img2, .projects #img3  {
+    border: 1px solid var(--border-color);
+    background: var(--primary-color);
 }
 
 .projects .text_card h3 {
@@ -618,13 +608,14 @@ hr {
 }
 
 .contact-links a {
-    color: var(--color-text-main);
+    color: var(--text-main);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .contact-links a:hover {
-    color: var(--color-text-sub);
+    color: var(--primary-color);
+    text-decoration: underline;
 }
 
 .social-links-container {
@@ -639,11 +630,11 @@ hr {
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid var(--color-text-sub);
+    border: 2px solid var(--border-color);
     font-size: 1.25rem;
     margin: 10px 10px 10px 0;
     text-decoration: none;
-    color: var(--color-text-sub);
+    color: var(--primary-color);
     border-radius: 50%;
     transition: all 0.3s ease;
     opacity: 0;
@@ -652,10 +643,11 @@ hr {
 }
 
 .social-links:hover {
-    background-color: var(--color-text-sub);
-    color: var(--color-bg);
+    background-color: var(--primary-color-hover);
+    color: var(--body-bg);
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 238, 255, 0.3);
+    border: none;
+    box-shadow: 0 2px 10px 2px var(--primary-color);
 }
 
 .contact form {
@@ -667,9 +659,9 @@ hr {
 
 input,
 textarea {
-    background: var(--color-bg);
-    border: 1px solid var(--color-project-one-start);
-    color: var(--color-text-main);
+    background: var(--body-bg);
+    border: 1px solid var(--primary-color);
+    color: var(--text-main);
     padding: 0.75rem;
     border-radius: 8px;
     width: 100%;
@@ -679,32 +671,36 @@ textarea {
 
 input:focus,
 textarea:focus {
-    border-color: var(--color-project-one-end);
+    border-color: var(--text-main);
     outline: none;
 }
 
 .contact button {
-    background-color: var(--color-btn-secondary);
-    color: var(--color-white);
+    background-color: var(--primary-color);
+    color: var(--primary-const-color);
     border: none;
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
     cursor: pointer;
     font-size: 0.9rem;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 .contact button:hover {
-    background-color: var(--color-project-two-start);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+    background-color: var(--primary-color-hover);
+    transform: scale(1.005);
+    box-shadow: 0 5px 10px rgba(99, 102, 241, 0.3);
+}
+.contact button:active {
+    box-shadow: 0 5px 10px rgba(99, 102, 241, 0.3);
+    transform: scale(0.99);
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 1.5rem;
-    background-color: var(--color-bg);
+    background-color: var(--body-bg);
     font-size: 0.9rem;
 }
 
