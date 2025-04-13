@@ -3,54 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" href="https://vercel.com/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Portfolio of Jhorin Aton, an ICT student aspiring to be a fullstack developer.">
+    <meta name="keywords" content="portfolio, Jhorin Aton, web development, HTML, CSS, JavaScript">
+    <meta name="author" content="Jhorin Aton">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"></noscript>
+    <link rel="preload" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"></noscript>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
     <title>Jhorin Aton</title>
 </head>
 <body>
     <header>
         <a href="#hero" class="logo">ctrl_shift_nir</a>
-            <nav class="navbar">
-                <ul class="nav-links">
-                    <li><a href="#about-me" style="--i:1;">About</a></li>
-                    <li><a href="#projects" style="--i:2;">Projects</a></li>
-                    <li><a href="#contact" style="--i:3;">Contact</a></li>
-                    <button id="theme-btn"><i class='bx bx-sun'></i><i class='bx bx-moon' ></i><div class="circle"></div></button>
-                </ul>
-                <div class="menu-toggle">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
-            </nav>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#about-me" style="--i:1;">About</a></li>
+                <li><a href="#projects" style="--i:2;">Projects</a></li>
+                <li><a href="#contact" style="--i:3;">Contact</a></li>
+                <button id="theme-btn" aria-label="Toggle dark mode"><i class='bx bx-sun'></i><i class='bx bx-moon'></i><div class="circle"></div></button>
+            </ul>
+            <div class="menu-toggle" aria-label="Menu toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
     </header>
     <main>
-
-        <!-- HERO -->
+        <!-- hero section -->
         <section class="hero" id="hero">
             <div class="hero-content">
-                <!-- <div class="hero-img" id="image_1">
-                    <img src="img/received_1043091713773495-removebg-preview.png" alt="Jhorin Aton's Photo">
-                </div> -->
                 <h1>Jhorin Aton</h1>
-                <h3><span class="multiple-text"></span></h3>
+                <h3><span class="multiple-text" aria-live="polite"></span></h3>
                 <p>I enjoy building clean and responsive websites using HTML, CSS, and JavaScript.</p>
-
                 <div class="hero-btn">
                     <a href="jhorin.pdf" download>Download Resume</a>                      
                     <a href="#about-me">View More</a>
                 </div>
             </div>
-
             <div class="hero-img">
-                <img src="/img/489729336_3524288591209459_8981594014902484169_n (1).jpg" alt="Jhorin Aton's Image">
+                <img src="img/profile.jpg" alt="Jhorin Aton" width="400" height="400" loading="lazy">
             </div>
         </section>
 
         <hr>
 
-        <!-- ABOUT-ME -->
+        <!-- about me  -->
         <section class="about-me" id="about-me">
             <h1 class="animate-item" data-direction="left">About me</h1>
             <div class="card-body">
@@ -59,64 +63,61 @@
                         <p>Hi, I'm Jhorin Aton, a Grade 12 ICT student passionate about web development. I enjoy building static websites using HTML, CSS, and JavaScript.</p>
                     </div>
                     <div class="card animate-item" data-direction="top">
-                        <h3>My Goals</h3>
+                        <h2>My Goals</h2>
                         <ul>
                             <li>Expand my knowledge in front-end development by mastering frameworks like React.</li>
                             <li>Build dynamic projects to enhance my problem-solving and coding skills.</li>
-                            <li>Showcase my growth through this portfolio—proving that hard work beats talent when talent doesn’t work hard.</li>
                         </ul>
                     </div>
                     <div class="card educ animate-item" data-direction="top" id="educ">
-                        <h3>Educational background</h3>
+                        <h2>Educational background</h2>
                         <ul>
                             <li class="li" id="cur-educ">
-                                <strong><a href="https://facebook.com/PlaridelCampus" target="_blank">Arellano University Plaridel Campus:</a></strong> 2023-2025
+                                <strong><a href="https://facebook.com/PlaridelCampus" target="_blank" rel="noopener noreferrer">Arellano University Plaridel Campus:</a></strong> 2023-2025
                                 <p>Information Communication and Technology <br>53 Gen. Kalentong St., Mandaluyong City</p>
                             </li>
                             <li class="li" id="second-educ">
-                                <strong><a href="https://facebook.com/GEAIS1965" target="_blank">Gen. Emilio Aguinaldo Integrated Highschool:</a></strong> 2017-2023
+                                <strong><a href="https://facebook.com/GEAIS1965" target="_blank" rel="noopener noreferrer">Gen. Emilio Aguinaldo Integrated Highschool:</a></strong> 2017-2023
                             </li>
                             <li class="li" id="third-educ">
-                                <strong><a href="https://facebook.com/GEAISElementary" target="_blank">Gen. Emilio Aguinaldo Integrated School:</a></strong> 2010-2017                            
+                                <strong><a href="https://facebook.com/GEAISElementary" target="_blank" rel="noopener noreferrer">Gen. Emilio Aguinaldo Integrated School:</a></strong> 2010-2017                            
                             </li>
                         </ul>
                     </div>
                 </div>
     
-    
                 <div class="skills-tools">
                     <div class="card animate-item" data-direction="top">
-                        <h3>Skills</h3>
+                        <h2>Skills</h2>
                         <div class="about-icons">
-                            <i class='bx bxl-html5' id="html" style="--i:9;"></i>
-                            <i class='bx bxl-css3' id="css" style="--i:10;"></i>
-                            <i class='bx bxl-javascript' id="js" style="--i:11;"></i>
-                            <i class='bx bx-desktop' id="desktop" style="--i:14;"></i>
+                            <i class='bx bxl-html5' id="html" style="--i:9;" aria-hidden="true"></i>
+                            <i class='bx bxl-css3' id="css" style="--i:10;" aria-hidden="true"></i>
+                            <i class='bx bxl-javascript' id="js" style="--i:11;" aria-hidden="true"></i>
+                            <i class='bx bx-desktop' id="desktop" style="--i:14;" aria-hidden="true"></i>
                         </div>
                         <ul>
                             <li>HTML5: <strong>1 month</strong></li>
                             <li>CSS <strong>1 month</strong></li>
-                            <li>JAVASCRIPT <strong>1 week</strong></li>
+                            <li>JavaScript <strong>1 week</strong></li>
                             <li>Responsive Web Design</li>
                         </ul>
                     </div>
 
                     <div class="card animate-item" data-direction="top">
-                        <h3>Tools</h3>
+                        <h2>Tools</h2>
                         <div class="about-icons">
-                            <i class='bx bxl-git' id="git" style="--i:12;"></i>
-                            <i class='bx bxl-github' id="github" style="--i:13;"></i>
+                            <i class='bx bxl-git' id="git" style="--i:12;" aria-hidden="true"></i>
+                            <i class='bx bxl-github' id="github" style="--i:13;" aria-hidden="true"></i>
                         </div>
                         <ul>
-                            <li>Basic Git and Github</li>
-                            <li>Responsive Web Design</li>
+                            <li>Basic Git and GitHub</li>
                         </ul>
                     </div>
     
                     <div class="card animate-item" data-direction="top">
-                        <h3>Currently Learning</h3>
+                        <h2>Currently Learning</h2>
                         <ul>
-                            <li>Backend Basics (PHP, PYTHON)</li>
+                            <li>Backend Basics (PHP, Python)</li>
                             <li>APIs and Database</li>
                         </ul>
                     </div>
@@ -126,27 +127,28 @@
 
         <hr>
 
+        <!-- projects section -->
         <section class="projects" id="projects">
             <h1 class="animate-item" data-direction="left">Projects</h1>
             <div class="card-body">
                 <div class="card animate-item" data-direction="right-img" style="--i:10;">
-                    <div class="img" id="img1"></div>
+                    <div class="img" id="img1" role="img" aria-label="Personal Portfolio Website"></div>
                     <div class="text_card">
-                        <h3>Personal Portfolio Website</h3>
-                        <p>A responsive portfolio website built using HTML, CSS, and Javascript to showcase my skills and projects.</p>
-                        <p><strong>Tech used: </strong>HTML, CSS, JS</p>    
+                        <h2>Personal Portfolio Website</h2>
+                        <p>A responsive portfolio website built using HTML, CSS, and JavaScript to showcase my skills and projects.</p>
+                        <p><strong>Tech used: </strong>HTML, CSS, JavaScript</p>    
                     </div>
                 </div>
                 <div class="card animate-item" data-direction="right-img" style="--i:11;">
-                    <div class="img" id="img2"></div>
+                    <div class="img" id="img2" role="img" aria-label="Coming soon"></div>
                     <div class="text_card">
-                        <h3>Soon...</h3>
+                        <h2>Soon...</h2>
                     </div>
                 </div>
                 <div class="card animate-item" data-direction="right-img" style="--i:12;">
-                    <div class="img" id="img3"></div>
+                    <div class="img" id="img3" role="img" aria-label="Coming soon"></div>
                     <div class="text_card">
-                        <h3>Soon...</h3>
+                        <h2>Soon...</h2>
                     </div>
                 </div>
             </div>
@@ -154,47 +156,43 @@
 
         <hr>
 
+        <!-- contact section -->
         <section class="contact" id="contact">
             <h1 class="animate-item" data-direction="left">Contact</h1>
             <div class="card-body">
                 <div class="social-icons animate-item" data-direction="top">
-                    <p>Let’s connect! Whether you have a question or want to collaborate, feel free to reach out.</p>
-                  
+                    <p>Let's connect! Whether you have a question or want to collaborate, feel free to reach out.</p>
                     <div class="contact-links">
-                        <label id="a1">Email: </label><a href="mailto:jhorin.aton073104@gmail.com" target="_blank">jhorin.aton073104@gmail.com</a><br>
-                        <label>Phone #: </label><a href="tel:+63916599731" target="_blank">09916599731</a>
+                        <span id="email"></span> 
+                        <span id="phone"></span>
                     </div>
                     <div class="social-links-container">
-                        <h3>My social media</h3>
-                        <a href="https://facebook.com/russnir31" class="social-links" target="_blank" style="--i:6;">
+                        <h2>My social media</h2>
+                        <a href="https://facebook.com/russnir31" class="social-links" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="--i:6;">
                           <i class='bx bxl-facebook'></i>
                         </a>
-                        <a href="https://www.instagram.com/ctrl_shift_nir/" class="social-links" target="_blank" style="--i:7;">
+                        <a href="https://www.instagram.com/ctrl_shift_nir/" class="social-links" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="--i:7;">
                           <i class='bx bxl-instagram'></i>
                         </a>
-                        <a href="https://www.tiktok.com/@russnirx" class="social-links" target="_blank" style="--i:9;">
+                        <a href="https://www.tiktok.com/@russnirx" class="social-links" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="--i:9;">
                           <i class='bx bxl-tiktok'></i>
                         </a>
                     </div>
-                  </div>
-                  
+                </div>
               
-                <!-- modify this form HTML and place wherever you want your form -->
                 <form action="https://formspree.io/f/xvgkvldg" method="POST" class="animate-item" data-direction="top">
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email">
+                    <textarea name="message" rows="5" placeholder="Your Message" required aria-label="Your Message"></textarea>
                     <button type="submit">Send Message</button>
                 </form>
             </div>
         </section>
-          
     </main>
 
+    <!-- footer -->
     <footer>
-        <p>&copy; 2025 Jhorin Aton. All rights reserved.</p>
+        <p>&copy; <span id="current-year"></span> Jhorin Aton. All rights reserved.</p>
     </footer>
-    
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>

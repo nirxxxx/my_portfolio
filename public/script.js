@@ -1,9 +1,12 @@
-// JavaScript for menu toggle (simplified)
 document.addEventListener('DOMContentLoaded', function() {
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
+  // const headerLinks = document.querySelectorAll('header a');
   
-  // Remove any existing animation classes
+
+
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+
   menuToggle.classList.remove('animate__animated', 'animate__fadeIn');
   
   menuToggle.addEventListener('click', function() {
@@ -11,15 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
       navLinks.classList.toggle('active');
   });
   
-  // Close menu when clicking on a link
-  document.querySelectorAll('.nav-links a').forEach(link => {
+  document.querySelectorAll('header a').forEach(link => {
       link.addEventListener('click', () => {
           menuToggle.classList.remove('open');
           navLinks.classList.remove('active');
       });
   });
   
-  // Intersection Observer for animations
   const animateItems = document.querySelectorAll('.animate-item');
   
   const observer = new IntersectionObserver((entries) => {
@@ -59,7 +60,6 @@ var typed = new Typed('.multiple-text', {
 // });
 const themeBtn = document.getElementById('theme-btn');
 
-// Initialize theme from localStorage or OS preference
 function initTheme() {
   const savedTheme = localStorage.getItem('theme');
   const osPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -70,7 +70,6 @@ function initTheme() {
   }
 }
 
-// Toggle theme function
 function toggleTheme() {
   const isDark = document.body.hasAttribute('data-theme');
   
@@ -85,13 +84,12 @@ function toggleTheme() {
   }
 }
 
-// Event listener with error handling
 themeBtn.addEventListener('click', () => {
   try {
     toggleTheme();
   } catch (error) {
     console.error('Theme toggle failed:', error);
-    // Optional fallback notification
+
     themeBtn.textContent = 'Error changing theme';
     setTimeout(() => {
       themeBtn.textContent = 'Toggle Theme';
@@ -99,12 +97,10 @@ themeBtn.addEventListener('click', () => {
   }
 });
 
-// Initialize on page load
 document.addEventListener('DOMContentLoaded', initTheme);
 
-// Watch for OS theme changes
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-  if (!localStorage.getItem('theme')) { // Only respond if no manual preference
+  if (!localStorage.getItem('theme')) { 
     if (e.matches) {
       document.body.setAttribute('data-theme', 'dark');
       themeBtn.classList.add('active');
@@ -114,3 +110,18 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
     }
   }
 });
+
+
+
+
+  const user = "jhorin.aton073104";
+  const domain = "gmail.com";
+  document.getElementById("email").innerHTML =
+    `<a href="mailto:${user}@${domain}">Email: ${user}@${domain}</a>`;
+
+  const part1 = "+63";
+  const part2 = "9916599731";
+  const fullPhone = part1 + part2;
+  document.getElementById("phone").innerHTML =
+    `<a href="tel:${fullPhone}">Contact #: ${part2}</a>`;
+
