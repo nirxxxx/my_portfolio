@@ -426,16 +426,16 @@ hr {
 
 .intro .educ ul li {
     padding: 1.25rem;
-    color: var(--text-main);
+    color: var(--primary-const-color);
     transition: all 0.3s ease;
     list-style: none;
     box-shadow: var(--box-shadow);
-    text-shadow: var(--card-shadow);
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
 }
 
 .intro ul li a {
     text-decoration: none;
-    color: var(--text-main);
+    color: var(--primary-const-color);
 }
 
 #cur-educ {
