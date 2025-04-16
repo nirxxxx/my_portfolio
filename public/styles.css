@@ -545,10 +545,21 @@ hr {
     background-image: url('img/Screenshot\ from\ 2025-04-13\ 14-31-59.png');
     border: 1px solid var(--border-color);
 }
+.projects #img2 {
+    border: 1px solid var(--border-color);
+    background-image: url(./img/screenshot-2025-04-16-15-21-07.png);
+}
 
-.projects #img2, .projects #img3  {
+.projects #img3  {
     border: 1px solid var(--border-color);
     background: var(--primary-color);
+}
+
+.projects .text_card {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .projects .text_card h3 {
@@ -560,6 +571,13 @@ hr {
 .projects .text_card p {
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
+}
+.projects .text_card a {
+    text-decoration: none;
+    color: var(--text-main);
+}
+.text_card a:hover {
+    color: var(--primary-color);
 }
 
 /* Contact Section */
