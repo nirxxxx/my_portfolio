@@ -18,20 +18,6 @@
     --secondary-const-color: #212529;
 }
 
-body.active {
-    --header-bg: #1A1A1A;
-    --body-bg: #121212;
-    --text-main: #E9ECEF;
-    --card-bg: #242424;
-    --card-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
-    --primary-color: #6C63FF;
-    --primary-color-text: #212529;
-    --primary-color-hover: #5A52D4;
-    --border-color: #333333;
-    --secondary-color-text: #FFFFFF;
-    --box-shadow: 0 5px 10px rgba(49, 48, 48, 0.2);
-    --secondary-color-hover: #1A1A1A;
-}
 
 * {
     margin: 0;
@@ -49,9 +35,23 @@ body {
     background-color: var(--body-bg);
     color: var(--text-main);
     line-height: 1.6;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: background-color 1s ease, color 1s ease;
 }
 
+body.active {
+    --header-bg: #1A1A1A;
+    --body-bg: #121212;
+    --text-main: #E9ECEF;
+    --card-bg: #242424;
+    --card-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+    --primary-color: #6C63FF;
+    --primary-color-text: #212529;
+    --primary-color-hover: #5A52D4;
+    --border-color: #333333;
+    --secondary-color-text: #FFFFFF;
+    --box-shadow: 0 5px 10px rgba(49, 48, 48, 0.2);
+    --secondary-color-hover: #1A1A1A;
+}
 .about-me, .projects, .contact {
     padding: 5rem 0;
 }
@@ -230,7 +230,7 @@ header .logo {
     position: absolute;
     top: 3px;
     left: 3px;
-    transition: all .3s ease-in-out;
+    transition: all .5s ease-in-out;
     z-index: -1; 
 }
 
